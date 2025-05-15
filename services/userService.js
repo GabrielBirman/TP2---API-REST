@@ -1,6 +1,5 @@
 const User = require('../models/user');
 
-// Simulación de una base de datos en memoria
 let users = [
   new User(1, 'Juan Pérez', 25, 8.5),
   new User(2, 'María Gómez', 30, 9.2),
@@ -26,7 +25,7 @@ const updateUser = async (id, updatedData) => {
     users[userIndex] = { ...users[userIndex], ...updatedData, id: userId };
     return users[userIndex];
   }
-  return null; // Indica que no se encontró el usuario
+  return null; 
 };
 
 module.exports = {
